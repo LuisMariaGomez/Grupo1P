@@ -1,0 +1,15 @@
+{
+  "ApiServer": {
+    "BaseURL": "https://localhost:7183",
+    "EndPoints": {
+      "Pais": {
+        "ObtenerTodo": "/api/Pais",
+        "ObtenerPorId": "/api/Pais/{0}",
+        "ObtenerPorNombre": "/api/Pais/nombre/{0}",
+        "Crear": "/api/Pais",
+        "Actualizar": "/api/Pais/{0}",
+        "Borrar": "/api/Pais/{0}"
+      }
+    }
+  }
+}

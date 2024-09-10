@@ -7,7 +7,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\Categorias\" />
+    <Folder Include="Dtos\Ciudades\" />
+    <Folder Include="Dtos\Clientes\" />
+    <Folder Include="Dtos\Distribuidores\" />
+    <Folder Include="Dtos\Empleados\" />
+    <Folder Include="Dtos\Estados\" />
+    <Folder Include="Dtos\Facturas\" />
+    <Folder Include="Dtos\Sectores\" />
+    <Folder Include="Dtos\Proveedores\" />
+    <Folder Include="Dtos\Productos\" />
+    <Folder Include="Dtos\OrdenesDeVenta_Producto\" />
+    <Folder Include="Dtos\OrdenesDeVenta\" />
+    <Folder Include="Dtos\OrdenesDeCompra_Producto\" />
+    <Folder Include="Dtos\OrdenesDeCompra\" />
+    <Folder Include="Dtos\Provincias\" />
   </ItemGroup>
 
 </Project>

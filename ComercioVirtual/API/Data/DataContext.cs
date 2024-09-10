@@ -11,11 +11,20 @@ namespace Api.Data
             : base(options) { }
         public DbSet<Personas> Personas { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+
+
+
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Personas>().HasIndex(x => x.Nombre);
+            //modelBuilder.Entity<Personas>().HasIndex(x => x.Nombre);
 
             modelBuilder.Entity<Personas>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
 

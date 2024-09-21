@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace Negocio.Repositorio
 {
-    internal class Persona()
+    internal class Personas()
     {
         public static async Task<List<Shared.Entities.Personas>> Get()
         {
@@ -113,7 +113,7 @@ namespace Negocio.Repositorio
             }
         }
 
-        public static async Task<Shared.Entities.Personas> Create(Shared.Dtos.Personas.CrearDTO pais)
+        public static async Task<Shared.Entities.Personas> Create(Shared.Dtos.Personas.CrearDTOPersonas pais)
         {
             try
             {
@@ -176,7 +176,7 @@ namespace Negocio.Repositorio
 
         public static async Task<Shared.Entities.Personas> Update(
             int id,
-            Shared.Dtos.Personas.ModificarDTO pais
+            Shared.Dtos.Personas.ModificarDTOPersonas pais
         )
         {
             try

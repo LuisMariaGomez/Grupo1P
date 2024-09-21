@@ -1,7 +1,7 @@
 ﻿namespace Shared.Entities
 
 {
-    public class Clientes
+    public class Clientes : EntityBase
     {
         public Estados? EstadoCliente { get; set; }
 

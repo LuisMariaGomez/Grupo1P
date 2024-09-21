@@ -1,6 +1,6 @@
 ﻿namespace Shared.Entities
 {
-    public class OrdenDeVenta : EntityBase
+    public class OrdenesDeVenta : EntityBase
     {
         public DateTime Fecha {  get; set; }
 

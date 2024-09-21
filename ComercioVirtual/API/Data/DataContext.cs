@@ -8,16 +8,24 @@ namespace Api.Data
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options)
+
             : base(options) { }
+        public DbSet<Categorias> Categorias { get; set; }
+        public DbSet<Clientes> Clientes { get; set; }
+        public DbSet<Distribuidores> Distribuidores { get; set; }
+        public DbSet<Empleados> Empleados { get; set; }
+        public DbSet<Estados> Estados { get; set; }
+        public DbSet<Facturas> Facturas { get; set; }
+        public DbSet<OrdenesDeCompra> OrdenesDeCompra { get; set; }
+        public DbSet<OrdenesDeCompra_Producto> OrdenesDeCompra_Producto { get; set; }
+        public DbSet<OrdenesDeVenta> OrdenesDeVenta { get; set; }
+        public DbSet<OrdenesDeVenta_Producto> OrdenesDeVenta_Producto { get; set; }
         public DbSet<Personas> Personas { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-
-
-
-
+        public DbSet<Productos> Productos { get; set; }
+        public DbSet<Proveedores> Proveedores { get; set; }
+        public DbSet<Provincias> Provincias { get; set; }
+        public DbSet<Sectores> Sectores { get; set; }
+        public DbSet<TipoDocumento> TipoDocumento   { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,6 +35,8 @@ namespace Api.Data
             //modelBuilder.Entity<Personas>().HasIndex(x => x.Nombre);
 
             modelBuilder.Entity<Personas>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
+            modelBuilder.Entity<Productos>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
+            modelBuilder.Entity<TipoDocumento>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
 
             DisableCascadingDelete(modelBuilder);
         }
@@ -63,6 +73,19 @@ namespace Api.Data
                     entityEntry.Property("UpdatedDate").CurrentValue = DateTime.Now;
                 }
             }
+
+            // Cuando el estado de la entidad es Modified, en ese momento le asigno la fecha de la actualizacion
+            //var addedEntitiesWithTrackDate = this
+            //    .ChangeTracker.Entries()
+            //    .Where(c => c.State == EntityState.Added);
+            //foreach (var entityEntry in addedEntitiesWithTrackDate)
+            //{
+            //    if (entityEntry.Properties.Any(c => c.Metadata.Name == "CreatedDate"))
+            //    {
+            //        entityEntry.Property("CreatedDate").CurrentValue = DateTime.Now;
+            //    }
+            //}
+
         }
 
         private void DisableCascadingDelete(ModelBuilder modelBuilder)
@@ -75,9 +98,5 @@ namespace Api.Data
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
-
-
-        // Provincias
-
     }
 }

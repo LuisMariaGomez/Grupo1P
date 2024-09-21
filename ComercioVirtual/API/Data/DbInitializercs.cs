@@ -6,20 +6,18 @@ namespace Api.Data
     {
         public static void Initialize(DataContext context)
         {
-            // Busca por un Persona
-            if (context.Personas.Any())
+            // Busca por un TipoDocumento
+            if (context.TipoDocumento.Any())
             {
-                return; // La tabla Personas fue inicializada
+                return; // La tabla TipoDocumento fue inicializada
             }
 
             var personas = new Personas[]
             {
-                new Personas { Nombre = "Luis" },
-                new Personas { Nombre = "Facundo" },
-                new Personas { Nombre = "Juan" },
-                new Personas { Nombre = "Trinidad" },
-                new Personas { Nombre = "Eva" },
-                new Personas { Nombre = "Chuli" }
+                new Personas { Nombre = "Daniel" },
+                new Personas { Nombre = "Agustina" },
+                new Personas { Nombre = "Jorge" },
+                new Personas { Nombre = "Clota" },
             };
 
             context.Personas.AddRangeAsync(personas).Wait();

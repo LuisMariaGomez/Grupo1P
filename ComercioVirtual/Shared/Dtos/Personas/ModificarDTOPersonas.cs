@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shared.Dtos.Personas
 {
-    public class CrearDTO
+    public class ModificarDTOPersonas
     {
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
     }
 }

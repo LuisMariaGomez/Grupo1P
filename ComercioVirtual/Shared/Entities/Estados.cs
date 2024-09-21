@@ -1,6 +1,6 @@
 ﻿namespace Shared.Entities
 {
-    public class Estados
+    public class Estados : EntityBase
     {
         public string? Descripcion { get; set; }    // "De Baja" - "De Alta"
 

@@ -15,7 +15,8 @@ namespace Negocio.ClientHttp
 
         internal static string ObtenerUrlEndPoint(string Path)
         {
-            return ApplicationConfiguration.GetSetting("ApiServer:BaseURL") + Path;
+            string url = ApplicationConfiguration.GetSetting("ApiServer:BaseURL") + Path;
+            return url;
         }
     }
 }

@@ -30,14 +30,14 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Personas>> GetPersona(int id)
         {
-            var pais = await _context.Personas.FindAsync(id);
+            var persona = await _context.Personas.FindAsync(id);
 
-            if (pais == null)
+            if (persona == null)
             {
                 return NotFound();
             }
 
-            return pais;
+            return persona;
         }
 
         // GET: api/Personas/Luis
@@ -59,7 +59,7 @@ namespace API.Controllers
         // POST: api/Personas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Personas>> PostPersona(CrearDTO persona)
+        public async Task<ActionResult<Personas>> PostPersona(CrearDTOPersonas persona)
         {
             Personas personaEntity = new Personas { Nombre = persona.Nombre, };
 
@@ -72,7 +72,7 @@ namespace API.Controllers
         // PUT: api/Personas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<ActionResult<Personas>> PutPersona(int id, ModificarDTO Persona)
+        public async Task<ActionResult<Personas>> PutPersona(int id, ModificarDTOPersonas Persona)
         {
             Personas PersonaEntity = new Personas { Id = id, Nombre = Persona.Nombre, };
 

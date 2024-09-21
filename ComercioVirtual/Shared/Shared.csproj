@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Categorias\" />
     <Folder Include="Dtos\Ciudades\" />
     <Folder Include="Dtos\Clientes\" />
     <Folder Include="Dtos\Distribuidores\" />
@@ -26,8 +25,6 @@
     <Folder Include="Dtos\Estados\" />
     <Folder Include="Dtos\Facturas\" />
     <Folder Include="Dtos\Sectores\" />
-    <Folder Include="Dtos\Proveedores\" />
-    <Folder Include="Dtos\Productos\" />
     <Folder Include="Dtos\OrdenesDeVenta_Producto\" />
     <Folder Include="Dtos\OrdenesDeVenta\" />
     <Folder Include="Dtos\OrdenesDeCompra_Producto\" />

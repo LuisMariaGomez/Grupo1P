@@ -1,6 +1,6 @@
 ﻿namespace Shared.Entities
 {
-    public class Empleados 
+    public class Empleados : EntityBase
     {
         public string? Foto { get; set; } //Ver tema foto 
                                        //string ubicación de foto, ruta

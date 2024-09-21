@@ -3,11 +3,17 @@
     public class Productos : EntityBase
     {  
         public string? Nombre {  get; set; }
-        public int IdProveedor {  get; set; }
-        public int IdCategoria {  get; set; }
-        public int UnidadesProducto {  get; set; }
-        public int PrecioProducto {  get; set; }
-        public int Stock { get; set; }
+        public const int LengthNombre = 20;
+        public int? IdProveedor {  get; set; }
+        public int? IdCategoria {  get; set; }
+        public int? UnidadesProducto {  get; set; }
+        public float? PrecioProducto {  get; set; }
+        public int? Stock = 0;
+        // Plantear como poner foto
+
+
+
+
 
         // EF
         //public int ProveedorId { get; set; }

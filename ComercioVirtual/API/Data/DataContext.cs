@@ -37,6 +37,7 @@ namespace Api.Data
             modelBuilder.Entity<Personas>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
             modelBuilder.Entity<Productos>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
             modelBuilder.Entity<TipoDocumento>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
+            modelBuilder.Entity<Estados>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
 
             DisableCascadingDelete(modelBuilder);
         }

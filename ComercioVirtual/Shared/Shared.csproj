@@ -22,7 +22,6 @@
     <Folder Include="Dtos\Clientes\" />
     <Folder Include="Dtos\Distribuidores\" />
     <Folder Include="Dtos\Empleados\" />
-    <Folder Include="Dtos\Estados\" />
     <Folder Include="Dtos\Facturas\" />
     <Folder Include="Dtos\Sectores\" />
     <Folder Include="Dtos\OrdenesDeVenta_Producto\" />

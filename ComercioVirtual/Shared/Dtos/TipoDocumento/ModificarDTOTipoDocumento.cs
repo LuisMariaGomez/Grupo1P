@@ -10,6 +10,6 @@ namespace Shared.Dtos.TipoDocumento
     public class ModificarDTOTipoDocumento
     {
         public string? Nombre { get; set; }
-        public Estados? estado { get; set; }
+        public Shared.Entities.Estados? Estado { get; set; }
     }
 }

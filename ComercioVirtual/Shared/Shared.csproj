@@ -18,8 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Ciudades\" />
-    <Folder Include="Dtos\Clientes\" />
     <Folder Include="Dtos\Distribuidores\" />
     <Folder Include="Dtos\Empleados\" />
     <Folder Include="Dtos\Facturas\" />

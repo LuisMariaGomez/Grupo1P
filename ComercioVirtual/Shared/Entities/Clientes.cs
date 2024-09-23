@@ -3,6 +3,7 @@
 {
     public class Clientes : EntityBase
     {
+        public Personas? Persona { get; set; }
         public Estados? EstadoCliente { get; set; }
 
         //Ver como implementar el ID (no el que hereda de persona)

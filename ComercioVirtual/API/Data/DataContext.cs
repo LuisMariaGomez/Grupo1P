@@ -11,6 +11,7 @@ namespace Api.Data
 
             : base(options) { }
         public DbSet<Categorias> Categorias { get; set; }
+        public DbSet<Ciudades> Ciudades { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Distribuidores> Distribuidores { get; set; }
         public DbSet<Empleados> Empleados { get; set; }
@@ -38,6 +39,8 @@ namespace Api.Data
             modelBuilder.Entity<Productos>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
             modelBuilder.Entity<TipoDocumento>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
             modelBuilder.Entity<Estados>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
+            modelBuilder.Entity<Ciudades>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
+            modelBuilder.Entity<Clientes>().Property(x => x.CreatedDate).HasDefaultValue(DateTime.Now); // Cuando se crea el registro, se asigna la fecha
 
             DisableCascadingDelete(modelBuilder);
         }

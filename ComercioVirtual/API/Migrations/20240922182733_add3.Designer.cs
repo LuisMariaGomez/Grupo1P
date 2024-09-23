@@ -4,6 +4,7 @@ using Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240922182733_add3")]
+    partial class add3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,7 +70,7 @@ namespace API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 23, 16, 12, 9, 936, DateTimeKind.Local).AddTicks(2891));
+                        .HasDefaultValue(new DateTime(2024, 9, 22, 15, 27, 32, 156, DateTimeKind.Local).AddTicks(594));
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
@@ -90,13 +93,9 @@ namespace API.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 23, 16, 12, 9, 936, DateTimeKind.Local).AddTicks(3316));
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("EstadoClienteId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PersonaId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedDate")
@@ -105,8 +104,6 @@ namespace API.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("EstadoClienteId");
-
-                    b.HasIndex("PersonaId");
 
                     b.ToTable("Clientes");
                 });
@@ -179,7 +176,7 @@ namespace API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 23, 16, 12, 9, 936, DateTimeKind.Local).AddTicks(2513));
+                        .HasDefaultValue(new DateTime(2024, 9, 22, 15, 27, 32, 156, DateTimeKind.Local).AddTicks(179));
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
@@ -318,7 +315,7 @@ namespace API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 23, 16, 12, 9, 936, DateTimeKind.Local).AddTicks(997));
+                        .HasDefaultValue(new DateTime(2024, 9, 22, 15, 27, 32, 155, DateTimeKind.Local).AddTicks(8800));
 
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
@@ -363,7 +360,7 @@ namespace API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 23, 16, 12, 9, 936, DateTimeKind.Local).AddTicks(1634));
+                        .HasDefaultValue(new DateTime(2024, 9, 22, 15, 27, 32, 155, DateTimeKind.Local).AddTicks(9373));
 
                     b.Property<int?>("IdCategoria")
                         .HasColumnType("int");
@@ -489,7 +486,7 @@ namespace API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 23, 16, 12, 9, 936, DateTimeKind.Local).AddTicks(2028));
+                        .HasDefaultValue(new DateTime(2024, 9, 22, 15, 27, 32, 155, DateTimeKind.Local).AddTicks(9826));
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -521,14 +518,7 @@ namespace API.Migrations
                         .HasForeignKey("EstadoClienteId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Shared.Entities.Personas", "Persona")
-                        .WithMany()
-                        .HasForeignKey("PersonaId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.Navigation("EstadoCliente");
-
-                    b.Navigation("Persona");
                 });
 
             modelBuilder.Entity("Shared.Entities.Empleados", b =>

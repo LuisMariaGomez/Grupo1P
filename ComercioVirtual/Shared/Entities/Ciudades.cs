@@ -1,7 +1,7 @@
 ﻿namespace Shared.Entities
 
 {
-    public class Ciudad : EntityBase
+    public class Ciudades : EntityBase
     {
         public string? Nombre { get; set; }
         public string? Cp { get; set; }
